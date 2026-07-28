@@ -6,4 +6,8 @@
     <string name="attendance">attendance</string>
     <string name="tasks">tasks</string>
     <string name="marks">marks</string>
+
+
+    <string name="open_drawer">open drawer</string>
+    <string name="close_drawer">close drawer</string>
 </resources>
