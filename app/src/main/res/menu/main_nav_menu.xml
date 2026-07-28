@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_icon_selector"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/attendance"
+        android:icon="@drawable/attendance_menu_icon_selector"
+        android:title="@string/attendance" />
+    <item
+        android:id="@+id/task"
+        android:icon="@drawable/task_list_icon_selector"
+        android:title="@string/tasks"/>
+    <item
+        android:id="@+id/marks"
+        android:icon="@drawable/star_icon_selector"
+        android:title="@string/marks"
+        />
+
+</menu>
