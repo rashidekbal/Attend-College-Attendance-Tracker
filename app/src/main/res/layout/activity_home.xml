@@ -21,29 +21,6 @@
         android:layout_height="match_parent"
         android:clipChildren="false"
         android:clipToPadding="false">
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="@dimen/dp_50"
-            app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="@dimen/dp_20"
-            android:layout_marginEnd="@dimen/dp_20"
-            app:cardBackgroundColor="@android:color/transparent">
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="@dimen/dp_50"
-                android:layout_height="@dimen/dp_50"
-                android:elevation="@dimen/dp_5"
-                android:src="@android:drawable/ic_input_add"
-                app:tint="@color/white"
-                android:backgroundTint="@color/accent"
-                app:elevation="@dimen/dp_10"
-                android:hardwareAccelerated="true"
-                app:borderWidth="0dp"
-                android:outlineAmbientShadowColor="@color/accent"
-                android:outlineSpotShadowColor="@color/accent"
-                />
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
         <FrameLayout
             android:id="@+id/main_container"
@@ -67,6 +44,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@color/white"
+                android:backgroundTint="@color/accent"
+                app:elevation="@dimen/dp_10"
+                android:hardwareAccelerated="true"
+                android:outlineAmbientShadowColor="@color/accent"
+                android:outlineSpotShadowColor="@color/accent"
+                app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                />
+
 
 
 
