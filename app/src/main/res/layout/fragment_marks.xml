@@ -26,7 +26,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/optionBtn"
+                    android:id="@+id/sideBar_btn"
                     android:layout_width="@dimen/dp_40"
                     android:layout_height="@dimen/dp_40"
                     app:cardBackgroundColor="@color/surface">
