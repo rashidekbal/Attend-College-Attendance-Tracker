@@ -10,4 +10,11 @@
 
     <string name="open_drawer">open drawer</string>
     <string name="close_drawer">close drawer</string>
+    <string name="c">C</string>
+    <string name="a">A</string>
+    <string name="p">P</string>
+    <string name="see_all">See all</string>
+    <string name="upcoming_assignment">Upcoming Assignment</string>
+    <string name="next_holiday">Next holiday</string>
+    <string name="bunked_this_week">Bunked this week</string>
 </resources>
