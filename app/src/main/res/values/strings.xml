@@ -17,4 +17,8 @@
     <string name="upcoming_assignment">Upcoming Assignment</string>
     <string name="next_holiday">Next holiday</string>
     <string name="bunked_this_week">Bunked this week</string>
+    <string name="view_amp_edit_profile"><![CDATA[view & edit profile]]></string>
+    <string name="holidays">Holidays</string>
+    <string name="time_table">Time table</string>
+    <string name="setting">Setting</string>
 </resources>

@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AttendCollegeAttendanceTracker">
         <activity
+            android:name=".screens.setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.holiday.HolidayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.timeTable.TimeTableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".screens.home.HomeActivity"
             android:exported="true">
             <intent-filter>

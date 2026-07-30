@@ -10,10 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.rtechnologies.attend_collegeattendancetracker.databinding.FragmentAttandanceBinding;
+import com.rtechnologies.attend_collegeattendancetracker.screens.home.HomeActivity;
 
 
 public class AttandanceFragment extends Fragment {
     FragmentAttandanceBinding binding;
+    HomeActivity activity;
 
 
 
@@ -29,6 +31,20 @@ public class AttandanceFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding=FragmentAttandanceBinding.inflate(inflater,container,false);
+        init();
+        setEventListeners();
         return binding.getRoot();
+    }
+    private void setEventListeners() {
+        binding.sideBarBtn.setOnClickListener(this::handleSideBarCLick);
+    }
+
+    private void handleSideBarCLick(View view) {
+        if(activity!=null)activity.openDrawer();
+    }
+
+    private void init() {
+        activity=(HomeActivity) requireActivity();
+
     }
 }

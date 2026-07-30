@@ -10,10 +10,12 @@ import android.view.ViewGroup;
 
 import com.rtechnologies.attend_collegeattendancetracker.R;
 import com.rtechnologies.attend_collegeattendancetracker.databinding.FragmentMarksBinding;
+import com.rtechnologies.attend_collegeattendancetracker.screens.home.HomeActivity;
 
 
 public class MarksFragment extends Fragment {
     FragmentMarksBinding binding;
+    HomeActivity activity;
 
     public MarksFragment() {
         // Required empty public constructor
@@ -25,7 +27,20 @@ public class MarksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding=FragmentMarksBinding.inflate(inflater,container,false);
-        // Inflate the layout for this fragment
+       init();
+       setEventListeners();
         return binding.getRoot();
+    }
+    private void setEventListeners() {
+        binding.sideBarBtn.setOnClickListener(this::handleSideBarCLick);
+    }
+
+    private void handleSideBarCLick(View view) {
+        if(activity!=null)activity.openDrawer();
+    }
+
+    private void init() {
+        activity=(HomeActivity) requireActivity();
+
     }
 }

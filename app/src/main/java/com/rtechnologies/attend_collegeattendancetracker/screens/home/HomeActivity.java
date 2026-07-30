@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -45,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
+                if(binding.main.isDrawerOpen(GravityCompat.START)){binding.main.closeDrawer(GravityCompat.START);return;}
                 int count=fragmentManager.getBackStackEntryCount();
                 if (count > 1) {
                     fragmentManager.popBackStackImmediate();
@@ -176,6 +178,12 @@ public class HomeActivity extends AppCompatActivity {
     private void changeFragment(Fragment fragment,@Nullable String id){
         fragmentManager.beginTransaction().replace(binding.mainContainer.getId(),fragment).addToBackStack(id).commit();
 
+    }
+    public void openDrawer(){
+        binding.main.openDrawer(GravityCompat.START);
+    }
+    public void closeDrawer(){
+        binding.main.closeDrawer(GravityCompat.START);
     }
 
 }
