@@ -8,13 +8,7 @@
     android:background="@color/bg"
     android:fitsSystemWindows="false"
     tools:context=".screens.home.HomeActivity">
-    <!--    drawer layout-->
-    <FrameLayout
-        android:id="@+id/side_bar_layout"
-        android:layout_width="@dimen/dp_360"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/surface" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -67,5 +61,12 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+    <!--    drawer layout-->
+    <FrameLayout
+        android:id="@+id/side_bar_layout"
+        android:layout_width="@dimen/dp_360"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/surface"
+        />
 </androidx.drawerlayout.widget.DrawerLayout>

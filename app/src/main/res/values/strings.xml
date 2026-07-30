@@ -21,4 +21,9 @@
     <string name="holidays">Holidays</string>
     <string name="time_table">Time table</string>
     <string name="setting">Setting</string>
+    <string name="auto_excluded_from_attendance">Auto-excluded from attendance %</string>
+    <string name="notify_before_holiday">Notify before holiday</string>
+    <string name="get_a_reminder_1_day_prior">Get a reminder 1 day prior</string>
+    <string name="theme_amp_preferences"><![CDATA[Theme & preferences]]></string>
+    <string name="accent_color">Accent color</string>
 </resources>

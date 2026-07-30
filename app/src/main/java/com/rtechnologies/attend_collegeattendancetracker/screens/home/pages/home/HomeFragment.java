@@ -1,5 +1,6 @@
 package com.rtechnologies.attend_collegeattendancetracker.screens.home.pages.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.rtechnologies.attend_collegeattendancetracker.databinding.FragmentHomeBinding;
 import com.rtechnologies.attend_collegeattendancetracker.screens.home.HomeActivity;
+import com.rtechnologies.attend_collegeattendancetracker.screens.profile.ProfileActivity;
 
 
 public class HomeFragment extends Fragment {
@@ -36,6 +38,9 @@ public class HomeFragment extends Fragment {
 
     private void setEventListeners() {
         binding.sideBarBtn.setOnClickListener(this::handleSideBarCLick);
+        binding.profileBtn.setOnClickListener(v->{
+            requireActivity().startActivity(new Intent(requireActivity(), ProfileActivity.class));
+        });
     }
 
     private void handleSideBarCLick(View view) {

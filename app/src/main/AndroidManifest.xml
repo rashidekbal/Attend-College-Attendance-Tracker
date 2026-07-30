@@ -13,10 +13,13 @@
         android:theme="@style/Theme.AttendCollegeAttendanceTracker">
         <activity
             android:name=".screens.setting.SettingActivity"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
         <activity
             android:name=".screens.holiday.HolidayActivity"
-            android:exported="false" />
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".screens.timeTable.TimeTableActivity"
             android:exported="false" />
@@ -31,6 +34,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".screens.subject.SubjectInfoActivity"

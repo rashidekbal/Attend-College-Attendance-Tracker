@@ -9,18 +9,20 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.rtechnologies.attend_collegeattendancetracker.R;
+import com.rtechnologies.attend_collegeattendancetracker.databinding.ActivityHolidayBinding;
 
 public class HolidayActivity extends AppCompatActivity {
+    ActivityHolidayBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding=ActivityHolidayBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_holiday);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        setContentView(binding.getRoot());
+        setEventListeners();
+    }
+    private void setEventListeners(){
+        binding.backBtn.setOnClickListener(v->finish());
     }
 }
