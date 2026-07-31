@@ -26,4 +26,12 @@
     <string name="get_a_reminder_1_day_prior">Get a reminder 1 day prior</string>
     <string name="theme_amp_preferences"><![CDATA[Theme & preferences]]></string>
     <string name="accent_color">Accent color</string>
+    <string name="tap_any_cell_to_assign_or_change_a_subject">Tap any cell to assign or change a subject</string>
+    <string name="_50_minsample">50 min</string>
+    <string name="profile">Profile</string>
+    <string name="avatar_color">Avatar color</string>
+    <string name="used_across_the_app_for_greetings_and_tracking">Used across the app for greetings and tracking</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="name">Full Name</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
 </resources>

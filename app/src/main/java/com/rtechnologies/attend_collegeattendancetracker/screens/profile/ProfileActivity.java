@@ -9,18 +9,22 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.rtechnologies.attend_collegeattendancetracker.R;
+import com.rtechnologies.attend_collegeattendancetracker.databinding.ActivityProfileBinding;
 
 public class ProfileActivity extends AppCompatActivity {
+    ActivityProfileBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding=ActivityProfileBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_profile);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        setContentView(binding.getRoot());
+        setEventListeners();
+
+    }
+
+    private void setEventListeners() {
+        binding.backBtn.setOnClickListener(v->finish());
     }
 }

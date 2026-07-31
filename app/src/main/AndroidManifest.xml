@@ -12,14 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AttendCollegeAttendanceTracker">
         <activity
+            android:name=".screens.addMarks.AddMarksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.addAssignment.AddAssignmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.holiday.AddHolidayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.subject.AddSubjectActivity"
+            android:exported="false" />
+        <activity
             android:name=".screens.setting.SettingActivity"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".screens.holiday.HolidayActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".screens.timeTable.TimeTableActivity"
             android:exported="false" />
@@ -34,7 +43,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".screens.subject.SubjectInfoActivity"

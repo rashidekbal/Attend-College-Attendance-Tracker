@@ -1,10 +1,572 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_15"
     tools:context=".screens.timeTable.TimeTableActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="42dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_5">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/surface">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:padding="@dimen/dp_4"
+                android:src="@drawable/arrow_left" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:text="TimeTable"
+            android:textColor="@color/text"
+            android:textSize="@dimen/sp_26" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/tap_any_cell_to_assign_or_change_a_subject"
+                android:textColor="@color/text_dim"
+                android:textSize="@dimen/sp_13" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/surface_card_bg"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/dp_15"
+                        android:paddingVertical="@dimen/dp_20">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Period length"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@android:color/transparent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:padding="@dimen/dp_5"
+                                    android:src="@drawable/minus"
+
+                                    />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dp_8"
+                                android:text="@string/_50_minsample"
+                                android:textColor="@color/text" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@android:color/transparent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:padding="@dimen/dp_5"
+                                    android:src="@drawable/plus"
+
+                                    />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/surface_card_bg"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/dp_15"
+                        android:paddingVertical="@dimen/dp_20">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Periods / day"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@android:color/transparent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:padding="@dimen/dp_5"
+                                    android:src="@drawable/minus"
+
+                                    />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dp_8"
+                                android:text="5 slots"
+                                android:textColor="@color/text" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@android:color/transparent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:padding="@dimen/dp_5"
+                                    android:src="@drawable/plus"
+
+                                    />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/surface_card_bg"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/dp_15"
+                        android:paddingVertical="@dimen/dp_20">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Working days"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@android:color/transparent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:padding="@dimen/dp_5"
+                                    android:src="@drawable/minus"
+
+                                    />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dp_8"
+                                android:text="5 days"
+                                android:textColor="@color/text" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@android:color/transparent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:padding="@dimen/dp_5"
+                                    android:src="@drawable/plus"
+
+                                    />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="@dimen/dp_10"
+                android:text="Subjects"
+                android:textColor="@color/text"
+                android:textFontWeight="600"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/surface_card_bg"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_15">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/bottom_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_15">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_220"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="@dimen/dp_10"
+                            android:layout_height="@dimen/dp_10"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            app:cardBackgroundColor="@color/accent"
+                            app:cardCornerRadius="@dimen/dp_10" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Data structure"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/sp_18" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="4 slots/wk"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_15" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/bottom_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_15">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_220"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="@dimen/dp_10"
+                            android:layout_height="@dimen/dp_10"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            app:cardBackgroundColor="@color/success"
+                            app:cardCornerRadius="@dimen/dp_10" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Operating Systems"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/sp_18" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="2 slots/wk"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_15" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/bottom_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_15">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_220"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="@dimen/dp_10"
+                            android:layout_height="@dimen/dp_10"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            app:cardBackgroundColor="@color/danger"
+                            app:cardCornerRadius="@dimen/dp_10" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DBMS Lab"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/sp_18" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="5 slots/wk"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_15" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/bottom_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_15">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_220"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="@dimen/dp_10"
+                            android:layout_height="@dimen/dp_10"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            app:cardBackgroundColor="@color/black"
+                            app:cardCornerRadius="@dimen/dp_10" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Computer Networks"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/sp_18" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="3 slots/wk"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_15" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/bottom_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_15">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_220"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="@dimen/dp_10"
+                            android:layout_height="@dimen/dp_10"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            app:cardBackgroundColor="@android:color/holo_blue_dark"
+                            app:cardCornerRadius="@dimen/dp_10" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Software Engg."
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/sp_18" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="2 slots/wk"
+                            android:textColor="@color/text_dim"
+                            android:textSize="@dimen/sp_15" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

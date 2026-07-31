@@ -8,12 +8,42 @@
     android:orientation="vertical"
     android:paddingHorizontal="@dimen/dp_15"
     tools:context=".screens.home.pages.attendance.AttandanceFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_5">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/sideBar_btn"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            app:cardBackgroundColor="@color/surface">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/side_menu" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:text="Attendance"
+            android:textColor="@color/text"
+            android:textSize="@dimen/sp_26" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        android:layout_marginTop="42dp"
+
         >
 
         <LinearLayout
@@ -21,40 +51,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/sideBar_btn"
-                    android:layout_width="@dimen/dp_40"
-                    android:layout_height="@dimen/dp_40"
-                    app:cardBackgroundColor="@color/surface">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/dp_35"
-                        android:layout_height="@dimen/dp_35"
-                        android:layout_gravity="center"
-                        android:padding="@dimen/dp_10"
-                        android:src="@drawable/side_menu" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp_16"
-                    android:text="Attendance"
-                    android:textColor="@color/text"
-                    android:textSize="@dimen/sp_26" />
-            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
                 android:text="Semester 5 · Aug – Dec 82% overall"
                 android:textColor="@color/text_dim"
                 android:textSize="@dimen/sp_13" />
