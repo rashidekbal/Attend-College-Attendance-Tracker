@@ -12,6 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AttendCollegeAttendanceTracker">
         <activity
+            android:name=".screens.onBoarding.OnboardingActivity"
+            android:exported="true"
+            android:configChanges="uiMode"
+            android:theme="@style/Theme.Material3Expressive.DynamicColors.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".screens.addMarks.AddMarksActivity"
             android:exported="false" />
         <activity
@@ -38,11 +49,7 @@
         <activity
             android:name=".screens.home.HomeActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".screens.subject.SubjectInfoActivity"

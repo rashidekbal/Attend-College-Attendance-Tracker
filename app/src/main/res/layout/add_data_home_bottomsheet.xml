@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:paddingVertical="@dimen/dp_20">
+    <LinearLayout
+        android:id="@+id/add_assignment_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dp_5"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginVertical="@dimen/dp_10"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Assignment"
+            android:textColor="@color/text"
+            android:textSize="@dimen/sp_15"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Due date + reminder"
+            android:textColor="@color/text_dim"
+            android:textSize="@dimen/sp_12"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/add_subject_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dp_5"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginVertical="@dimen/dp_10"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Subject"
+            android:textColor="@color/text"
+            android:textSize="@dimen/sp_15"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New subject with weekly class count"
+            android:textColor="@color/text_dim"
+            android:textSize="@dimen/sp_12"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/add_marks_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dp_5"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginVertical="@dimen/dp_10"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Marks"
+            android:textColor="@color/text"
+            android:textSize="@dimen/sp_15"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log a mid sem marks"
+            android:textColor="@color/text_dim"
+            android:textSize="@dimen/sp_12"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/add_holiday_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dp_5"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginVertical="@dimen/dp_10"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Holiday"
+            android:textColor="@color/text"
+            android:textSize="@dimen/sp_15"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluded form attendance Automatically"
+            android:textColor="@color/text_dim"
+            android:textSize="@dimen/sp_12"
+            />
+    </LinearLayout>
+
+</LinearLayout>

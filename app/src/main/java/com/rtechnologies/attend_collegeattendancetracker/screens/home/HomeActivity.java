@@ -1,8 +1,10 @@
 package com.rtechnologies.attend_collegeattendancetracker.screens.home;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
@@ -14,14 +16,21 @@ import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.rtechnologies.attend_collegeattendancetracker.R;
 import com.rtechnologies.attend_collegeattendancetracker.constants.FragmentIds;
 import com.rtechnologies.attend_collegeattendancetracker.databinding.ActivityHomeBinding;
+import com.rtechnologies.attend_collegeattendancetracker.databinding.AddDataHomeBottomsheetBinding;
+import com.rtechnologies.attend_collegeattendancetracker.screens.addAssignment.AddAssignmentActivity;
+import com.rtechnologies.attend_collegeattendancetracker.screens.addMarks.AddMarksActivity;
+import com.rtechnologies.attend_collegeattendancetracker.screens.holiday.AddHolidayActivity;
 import com.rtechnologies.attend_collegeattendancetracker.screens.home.pages.attendance.AttandanceFragment;
 import com.rtechnologies.attend_collegeattendancetracker.screens.home.pages.home.HomeFragment;
 import com.rtechnologies.attend_collegeattendancetracker.screens.home.pages.marks.MarksFragment;
 import com.rtechnologies.attend_collegeattendancetracker.screens.home.pages.sidebar.SideBarFragment;
 import com.rtechnologies.attend_collegeattendancetracker.screens.home.pages.task.TaskFragment;
+import com.rtechnologies.attend_collegeattendancetracker.screens.subject.AddSubjectActivity;
 
 public class HomeActivity extends AppCompatActivity {
     private ActivityHomeBinding binding;
@@ -40,6 +49,42 @@ public class HomeActivity extends AppCompatActivity {
         setupNavigationSystem();
         setUpDrawerLayout();
         handleBackPress();
+        setEventListeners();
+    }
+
+    private void setEventListeners() {
+        binding.actionBtn.setOnClickListener(v->showActionBottomSheet());
+    }
+
+    private void showActionBottomSheet() {
+        AddDataHomeBottomsheetBinding bottomSheetBinding=AddDataHomeBottomsheetBinding.inflate(getLayoutInflater());
+        BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(this,R.style.TransparentBottomSheet);
+        FrameLayout frameLayout=bottomSheetDialog.findViewById(com.google.android.material.R.id.design_bottom_sheet);
+        if(frameLayout!=null){
+            BottomSheetBehavior<FrameLayout> behavior=BottomSheetBehavior.from(frameLayout);
+
+        }
+        bottomSheetDialog.setContentView(bottomSheetBinding.getRoot());
+        bottomSheetDialog.show();
+        bottomSheetDialog.setCanceledOnTouchOutside(true);
+        bottomSheetBinding.addAssignmentBtn.setOnClickListener(v->{
+            startActivity(new Intent(this, AddAssignmentActivity.class));
+            bottomSheetDialog.dismiss();
+        });
+        bottomSheetBinding.addSubjectBtn.setOnClickListener(v->{
+            startActivity(new Intent(this, AddSubjectActivity.class));
+            bottomSheetDialog.dismiss();
+        });
+        bottomSheetBinding.addMarksBtn.setOnClickListener(v->{
+            startActivity(new Intent(this, AddMarksActivity.class));
+            bottomSheetDialog.dismiss();
+        });
+        bottomSheetBinding.addHolidayBtn.setOnClickListener(v->{
+            startActivity(new Intent(this, AddHolidayActivity.class));
+            bottomSheetDialog.dismiss();
+        });
+
+
     }
 
     private void handleBackPress() {
